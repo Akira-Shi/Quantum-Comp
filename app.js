@@ -1,5 +1,4 @@
 (function () {
-    // Existing button click event handling
     [...document.querySelectorAll(".control")].forEach(button => {
         button.addEventListener("click", function() {
             document.querySelector(".active-btn").classList.remove("active-btn");
@@ -9,17 +8,16 @@
         });
     });
 
-    // Theme toggle button
     document.querySelector(".theme-btn").addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
     });
 
-    // Typing effect for "Quantum Computing"
+    // Typing effect 
     document.addEventListener("DOMContentLoaded", function () {
         const text = "Quantum ";
         const spanText = "Computing";
-        const speed = 150; // Speed of typing in ms
-        const pause = 1000; // Pause before restarting in ms
+        const speed = 150; 
+        const pause = 1000; 
         let index = 0;
         const typingText = document.querySelector(".name");
 
@@ -30,7 +28,7 @@
 
         function typeText() {
             if (index < text.length) {
-                typingText.innerHTML = text.substring(0, index + 1); // Typing Quantum
+                typingText.innerHTML = text.substring(0, index + 1); 
                 index++;
                 setTimeout(typeText, speed);
             } else {
@@ -68,7 +66,7 @@
             }
         }
 
-        typeText(); // Start typing effect
+        typeText(); 
     });
 
 })();
