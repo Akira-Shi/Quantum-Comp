@@ -11,7 +11,6 @@
   --color-white: #FFFFFF;
   --color-black: #000;
   
-  /* Greys for better contrast */
   --color-grey0: #f8f8f8;
   --color-grey-1: #dbe1e8;
   --color-grey-2: #b2becd;
@@ -20,7 +19,6 @@
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
   
-  /* Rounded corners & shadows */
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(142, 68, 173, 0.3); /* Purple glow effect */
 }
@@ -32,7 +30,6 @@
   --color-white: #2a2e35; /* Darker for contrast */
   --color-black: #000;
   
-  /* Warmer, richer greys */
   --color-grey0: #F5E8E1; /* Light creamy warm tone */
   --color-grey-1: #5C4B47;; /* Subtle beige-grey */
   --color-grey-2: #2E1B18; /* Desaturated soft brown */
@@ -41,8 +38,29 @@
   --color-grey-5: #F4E6E3; /* Warm off-white */
   --color-grey-6: #2E1B18; /* Dark reddish-brown */
   
-  /* Shadows with a subtle maple hue */
   --box-shadow-1: 0 3px 15px rgba(192, 57, 43, 0.3); /* Soft maple red glow */
+}
+
+.section-footer {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.6; /* Slight transparency */
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+/* Footer color in Dark Mode */
+body {
+  --footer-text-color: rgba(255, 255, 255, 0.5); /* Light grey in dark mode */
+}
+
+.light-mode {
+  --footer-text-color: rgba(46, 27, 24, 0.6); /* Dark brown in light mode */
+}
+
+.section-footer {
+  color: var(--footer-text-color);
 }
 
 
