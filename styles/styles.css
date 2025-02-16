@@ -463,26 +463,31 @@ section {
 }
 
 .portfolio-item {
-  width: 90%; /* Take up more screen space */
-  max-width: 1200px; /* Limit max size for big screens */
+  width: auto; /* Keep image's natural size */
+  max-width: 1200px; /* Limit max size */
+  display: flex;
+  justify-content: center;
 }
 
-/* Make media bigger while keeping aspect ratio */
-.portfolio-item .image img,
-.portfolio-item .video video {
-  width: 100%;
+/* Keep the image's original dimensions */
+.portfolio-item .image img {
+  display: block;
+  max-width: 100%; /* Prevent overflow */
   height: auto;
-  max-height: 80vh; /* Prevents overflow on small screens */
+  object-fit: contain; /* Maintain original aspect ratio */
   border-radius: 15px;
 }
 
-/* Improve video responsiveness */
+/* Keep video at the same size as images */
 .portfolio-item .video video {
   display: block;
   max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 15px;
 }
 
-/* Remove hover effects */
+/* Prevent hover effects */
 .portfolio-item .hover-items {
   display: none;
 }
